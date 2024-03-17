@@ -119,8 +119,9 @@
             <h3>Diselenggarakan pada 14 April 2024 di Kuningan, Jawa Barat.</h3>
             <p>
               Oleh karena itu, dengan segala hormat, kami bermaksud untuk
-              mengundang Bapak/Ibu/Saudara/i, untuk hadir pada acara pernikahan
-              putra & putri kami.
+              mengundang Bapak/Ibu/Saudara/i,
+              <br />
+              untuk hadir pada acara pernikahan putra & putri kami.
             </p>
           </div>
         </div>
@@ -378,7 +379,12 @@
           <div class="col-12">
             <div class="mb-3">
               <label for="nama" class="form-label">Nama</label>
-              <input type="text" class="form-control" id="nama" name="nama" />
+              <input
+                type="text"
+                class="form-control-lg"
+                id="nama"
+                name="nama"
+              />
             </div>
           </div>
           <div class="col-12">
@@ -386,7 +392,7 @@
               <label for="jumlah" class="form-label">Jumlah</label>
               <input
                 type="number"
-                class="form-control"
+                class="form-control-lg"
                 id="jumlah"
                 name="jumlah"
                 min="1"
@@ -399,15 +405,15 @@
           <div class="col-12">
             <div class="mb-3">
               <label for="status" class="form-label">Konfirmasi</label>
-              <select name="status" id="status" class="form-select">
+              <select name="status" id="status" class="form-select-lg">
                 <option selected>Pilih salah satu</option>
                 <option value="Hadir">Hadir</option>
                 <option value="Tidak Hadir">Tidak Hadir</option>
               </select>
             </div>
           </div>
-          <div class="col-12" style="margin-top: 31.5px">
-            <button class="btn btn-primary">Kirim</button>
+          <div class="col-12" style="margin-top: 0px">
+            <button class="btn btn-primary btn-lg">Kirim</button>
           </div>
         </form>
 
@@ -461,19 +467,27 @@
                 <div class="fw-bold">BRI</div>
                 DIKI ISKANDAR (Diki)
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="4268 0101 1413 539" readonly>
-                  <div class="tooltip">
-                    <button onclick="myFunction()" onmouseout="outFunc()">
-                      <span class="input-group-text" id="basic-addon2 tooltiptext" id="myTooltip">
-                        <i class="bi bi-clipboard"></i>
-                      </span>
-                      </button>
-                    </div>
+                  <input
+                    type="text"
+                    class="form-control text-center"
+                    placeholder="4268 0101 1413 539"
+                    readonly
+                    style="background-color: transparent; border: none"
+                  />
                 </div>
               </li>
               <li class="list-group-item" style="background-color: transparent">
                 <div class="fw-bold">BCA</div>
-                5390723581 - Aan Hanifatul Maula (Hanifa)
+                Aan Hanifatul Maula (Hanifa)
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control text-center"
+                    placeholder="5390723581"
+                    readonly
+                    style="background-color: transparent; border: none"
+                  />
+                </div>
               </li>
             </ul>
           </div>
@@ -643,6 +657,22 @@
       namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
 
       document.querySelector("#nama").value = nama;
+    </script>
+    <script>
+      function myFunction() {
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied: " + copyText.value;
+      }
+
+      function outFunc() {
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copy To Clipboard";
+      }
     </script>
   </body>
 </html>
