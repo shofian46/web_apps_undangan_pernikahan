@@ -87,7 +87,6 @@ body {
   text-transform: capitalize;
   text-decoration: none;
   color: var(--pink);
-  font-weight: 600;
 }
 
 .home {
@@ -225,6 +224,10 @@ body {
     font-size: 2rem;
     text-align: center;
   }
+
+  .sticky-top {
+    overflow: hidden;
+  }
 }
 
 /* Mobile phone */
@@ -238,8 +241,8 @@ body {
     margin: 3px;
   }
 
-  .mynavbar .offcanvas {
-    width: 50vh;
+  .offcanvas-backdrop {
+    width: 0;
     margin-right: 0;
     padding-right: 0;
   }
