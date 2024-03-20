@@ -112,7 +112,8 @@ body {
   font-weight: bold;
 }
 
-.home h3 {
+.home h3,
+.home h4 {
   color: var(--cokelat);
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -127,7 +128,8 @@ body {
   margin-top: 100px;
 }
 
-.home .couple h3 {
+.home .couple h3,
+.info h3 {
   font-family: "Sacramento", cursive;
   font-size: 2.4rem;
   color: var(--cokelat);
