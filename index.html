@@ -593,7 +593,7 @@
       }
 
       function playAudio() {
-        song.volume = 0.1;
+        song.volume = 0.5;
         audioIconWrapper.style.display = "flex";
         song.play();
         isPlaying = true;
@@ -642,22 +642,6 @@
       namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
 
       document.querySelector("#nama").value = nama;
-    </script>
-    <script>
-      function myFunction() {
-        var copyText = document.getElementById("myInput");
-        copyText.select();
-        copyText.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(copyText.value);
-
-        var tooltip = document.getElementById("myTooltip");
-        tooltip.innerHTML = "Copied: " + copyText.value;
-      }
-
-      function outFunc() {
-        var tooltip = document.getElementById("myTooltip");
-        tooltip.innerHTML = "Copy To Clipboard";
-      }
     </script>
   </body>
 </html>
