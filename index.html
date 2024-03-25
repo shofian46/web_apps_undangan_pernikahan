@@ -55,7 +55,7 @@
     </section>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md bg-transparent sticky-top">
+    <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
       <div class="container">
         <a class="navbar-brand" href="#">Diki & Hani</a>
         <button
@@ -86,53 +86,31 @@
             ></button>
           </div>
           <div class="offcanvas-body">
-            <ul
-              class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center"
-            >
-              <li class="nav-item">
-                <a class="nav-link fs-5" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5" href="#info">Info</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5" href="#gallery">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5" href="#rsvp">RSVP</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5" href="#gifts">Gifts</a>
-              </li>
-            </ul>
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#info">Info</a>
+              <a class="nav-link" href="#story">Story</a>
+              <a class="nav-link" href="#gallery">Gallery</a>
+              <a class="nav-link" href="#rsvp">RSVP</a>
+              <a class="nav-link" href="#gifts">Gifts</a>
+            </div>
           </div>
         </div>
       </div>
     </nav>
     <!-- End -->
 
+    <!-- Home -->
     <section class="home" id="home">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
-            <h3>ِبِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْم</h3>
-            <h4 class="home__description">
-              وَاللّٰهُ جَعَلَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا وَّجَعَلَ
-              لَكُمْ مِّنْ اَزْوَاجِكُمْ بَنِيْنَ وَحَفَدَةً وَّرَزَقَكُمْ مِّنَ
-              الطَّيِّبٰتِۗ اَفَبِالْبَاطِلِ يُؤْمِنُوْنَ وَبِنِعْمَتِ اللّٰهِ
-              هُمْ يَكْفُرُوْنَۙ ۝٧
-            </h4>
+            <h4>Assalamu’alaikum warahmatullahi wabarakatuh</h4>
+
             <p>
-              Allah menjadikan bagimu pasangan (suami atau istri) dari jenis
-              kamu sendiri, menjadikan bagimu dari pasanganmu anak-anak dan
-              cucu-cucu, serta menganugerahi kamu rezeki yang baik-baik. Mengapa
-              terhadap yang batil mereka beriman, sedangkan terhadap nikmat
-              Allah mereka ingkar?
-            </p>
-            <p>
-              Assalamu’alaikum warahmatullahi wabarakatuh Maha Suci Allah yang
-              telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga
-              ridho-Mu tercurah mengiringi pernikahan kami.
+              Maha Suci Allah yang telah menciptakan makhluk-Nya
+              berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah
+              mengiringi pernikahan kami.
             </p>
           </div>
         </div>
@@ -140,7 +118,7 @@
           <div class="col-lg-6">
             <div class="row">
               <div class="col-8 text-end">
-                <h4>Diki Iskandar</h4>
+                <h3>Diki Iskandar</h3>
                 <p>
                   Putra pertama dari Bpk.Maryo
                   <br />
@@ -171,7 +149,7 @@
                 />
               </div>
               <div class="col-8">
-                <h4>Aan Hanifatul Maula</h4>
+                <h3>Aan Hanifatul Maula</h3>
                 <p>
                   Putri kedua dari Bpk.Nur Arifin
                   <br />
@@ -183,9 +161,29 @@
             </div>
           </div>
         </div>
+        <div class="row justify-content-center couple">
+          <div class="col-md-8 text-center">
+            <h4>ِبِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْم</h4>
+            <h5>
+              وَاللّٰهُ جَعَلَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا وَّجَعَلَ
+              لَكُمْ مِّنْ اَزْوَاجِكُمْ بَنِيْنَ وَحَفَدَةً وَّرَزَقَكُمْ مِّنَ
+              الطَّيِّبٰتِۗ اَفَبِالْبَاطِلِ يُؤْمِنُوْنَ وَبِنِعْمَتِ اللّٰهِ
+              هُمْ يَكْفُرُوْنَۙ ۝٧
+            </h5>
+            <p>
+              Allah menjadikan bagimu pasangan (suami atau istri) dari jenis
+              kamu sendiri, menjadikan bagimu dari pasanganmu anak-anak dan
+              cucu-cucu, serta menganugerahi kamu rezeki yang baik-baik. Mengapa
+              terhadap yang batil mereka beriman, sedangkan terhadap nikmat
+              Allah mereka ingkar?
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+    <!-- End Home -->
 
+    <!-- Info -->
     <section class="info" id="info">
       <div class="container">
         <div class="row justify-content-center">
@@ -268,6 +266,80 @@
         </div>
       </div>
     </section>
+    <!-- End Info -->
+
+    <!-- Story -->
+    <section id="story" class="story">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>Bagaimana Cinta Kami Bersemi</span>
+            <h2>Cerita Kami</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <ul class="timeline">
+              <li>
+                <div
+                  class="timeline-image"
+                  style="background-image: url(img/building_school.jpg)"
+                ></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3>Pertama Bertemu</h3>
+                    <span>1 Januari 2018</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Modi itaque rerum harum accusamus natus deleniti!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div
+                  class="timeline-image"
+                  style="background-image: url(https://picsum.photos/300/300)"
+                ></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3>Mulai Serius</h3>
+                    <span>1 Januari 2017</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Modi itaque rerum harum accusamus natus deleniti!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="timeline-image"
+                  style="background-image: url(https://picsum.photos/301/301)"
+                ></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3>Tunangan</h3>
+                    <span>7 November 2018</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Modi itaque rerum harum accusamus natus deleniti!
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Story -->
 
     <!-- Gallery -->
     <section id="gallery" class="gallery">
@@ -369,6 +441,7 @@
         </div>
       </div>
     </section>
+    <!-- End Gallery -->
 
     <!-- RSVP -->
     <section id="rsvp" class="rsvp">
@@ -422,8 +495,8 @@
               </select>
             </div>
           </div>
-          <div class="col-12" style="margin-top: 0px">
-            <button class="btn btn-primary btn-lg">Kirim</button>
+          <div class="col-12">
+            <button class="btn btn-primary">Kirim</button>
           </div>
         </form>
 
@@ -432,6 +505,7 @@
         </div>
       </div>
     </section>
+    <!-- End Rsvp -->
 
     <!-- Gift -->
     <section id="gifts" class="gifts">
@@ -477,6 +551,7 @@
         </div>
       </div>
     </section>
+    <!-- End Gift -->
 
     <!-- Footer -->
     <footer>
@@ -515,6 +590,7 @@
         </div>
       </div>
     </footer>
+    <!-- End Footer -->
 
     <!-- Audio -->
     <div id="audio-container">
