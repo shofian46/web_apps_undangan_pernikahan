@@ -24,6 +24,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
 
+    <!-- DataTable -->
+    <link
+      rel="stylesheet"
+      href="//cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css"
+    />
+
     <!-- Simply Countdown -->
     <link
       rel="stylesheet"
@@ -490,42 +496,74 @@
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
             <h2>Konfirmasi Kehadiran</h2>
-            <p><b>Konfirmasi kehadiranmu pada acara kami.</b></p>
+            <p>Isi form di bawah ini untuk melakukan konfirmasi kehadiran.</p>
           </div>
         </div>
-        <div class="row row-cols-md-auto g-3 align-items-center justify-content-center">
-          <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <div class="head"><h4>Tulis pesan dan doa' untuk kami</h4></div>
-                <div>
-                  <span id="comment">0</span> Pesan & Doa'
-                </div>
-                <div class="comments"></div>
-                  <div class="commentbox">
-                    <img src="assets/img/user1.png" alt="user"/>
-                    <div class="content">
-                        <h4>Nama Anda: </h4>
-                        <input type="text" value="Anonymous" id="nama" name="nama" placeholder="Nama anda" class="user">
 
-                        <div class="commentinput">
-                            <input type="text" placeholder="Enter comment" class="usercomment">
-                            <div class="buttons">
-                                <button type="submit" disabled id="publish">Publish</button>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-
-              </div>
+        <form
+          class="row row-cols-md-auto g-3 align-items-center justify-content-center"
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbziLbjsq7xq7GJNuLygnnN4hgrcQkcAS9ArKNAGhiHbMk8EvP2bjgH6f7bs9OmZ8fxg/exec"
+          id="my-form"
+        >
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input
+                type="text"
+                class="form-control-lg"
+                id="nama"
+                name="nama"
+              />
             </div>
           </div>
-        </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="jumlah" class="form-label">Jumlah</label>
+              <input
+                type="number"
+                class="form-control-lg"
+                id="jumlah"
+                name="jumlah"
+                min="1"
+                max="5"
+                length="1"
+                value="1"
+              />
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="status" class="form-label">Konfirmasi</label>
+              <select name="status" id="status" class="form-select-lg">
+                <option selected>Pilih salah satu</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak Hadir">Tidak Hadir</option>
+              </select>
+            </div>
+          </div>
+          <!-- <div class="col-12">
+            <div class="mb-3">
+              <label for="pesan" class="form-label">Pesan</label>
+              <input
+                type="text"
+                class="form-control-lg"
+                id="pesan"
+                name="pesan"
+              />
+            </div>
+          </div> -->
+          <div class="col-12">
+            <button class="btn btn-primary">Kirim</button>
+          </div>
+        </form>
 
         <div class="row justify-content-center mt-5">
-          <div class="col-md-6"></div>
+          <div class="col-md-6">
+            <div class="responsive">
+              <table class="table table-hover" id="DataTable"></table>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -642,8 +680,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
 
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
     <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== DataTables ===============-->
+    <script src="//cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
 
     <!-- Simply Countdown -->
     <script src="assets/js/simplyCountdown.min.js"></script>
@@ -753,6 +799,46 @@
       namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
 
       document.querySelector("#nama").value = nama;
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#DataTable").DataTable({
+          ajax: "https://script.google.com/macros/s/AKfycbyta0R1TWSwmkfiV--OUoNFbMZkCJiLVKcdzDNB9r_H5AbXvk0zcpzW7slHyeK2YVI0/exec",
+          columns: [
+            {
+              title: "Tanggal",
+              data: "tanggal",
+            },
+            {
+              title: "Nama",
+              data: "nama",
+            },
+            {
+              title: "Jumlah",
+              data: "jumlah",
+            },
+            {
+              title: "Konfirmasi",
+              data: "status",
+            },
+          ],
+          rowId: "nama",
+          liveAjax: true,
+          responsive: {
+            breakpoints: [
+              { name: "bigdesktop", width: Infinity },
+              { name: "meddesktop", width: 1480 },
+              { name: "smalldesktop", width: 1280 },
+              { name: "medium", width: 1188 },
+              { name: "tabletl", width: 1024 },
+              { name: "btwtabllandp", width: 848 },
+              { name: "tabletp", width: 768 },
+              { name: "mobilel", width: 480 },
+              { name: "mobilep", width: 320 },
+            ],
+          },
+        });
+      });
     </script>
   </body>
 </html>
