@@ -542,7 +542,7 @@
               </select>
             </div>
           </div>
-          <!-- <div class="col-12">
+          <div class="col-12">
             <div class="mb-3">
               <label for="pesan" class="form-label">Pesan</label>
               <input
@@ -552,7 +552,7 @@
                 name="pesan"
               />
             </div>
-          </div> -->
+          </div>
           <div class="col-12">
             <button class="btn btn-primary">Kirim</button>
           </div>
@@ -681,10 +681,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
 
     <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.0/js/dataTables.responsive.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.0/js/responsive.bootstrap5.js"></script>
     <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
 
@@ -817,23 +822,16 @@
               title: "Konfirmasi",
               data: "status",
             },
+            {
+              title: "Pesan",
+              data: "pesan",
+            },
           ],
           rowId: "nama",
           liveAjax: true,
-          responsive: {
-            breakpoints: [
-              { name: "bigdesktop", width: Infinity },
-              { name: "meddesktop", width: 1480 },
-              { name: "smalldesktop", width: 1280 },
-              { name: "medium", width: 1188 },
-              { name: "tabletl", width: 1024 },
-              { name: "btwtabllandp", width: 848 },
-              { name: "tabletp", width: 768 },
-              { name: "mobilel", width: 480 },
-              { name: "mobilep", width: 320 },
-            ],
-          },
+          responsive: true,
         });
+        $("#DataTable").reload();
       });
     </script>
   </body>
