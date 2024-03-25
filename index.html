@@ -41,14 +41,20 @@
       class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
     >
       <main>
-        <h4>
+        <h4 class="hero__title">
           Kepada
           <span>Bapak/Ibu/Saudara/i,</span>
         </h4>
-        <h1 class="mt-4">Diki & Hani</h1>
-        <p class="mt-0">Akan melangsungkan resepsi pernikahan dalam:</p>
+        <h1 class="mt-4 hero__subtitle">Diky & Hani</h1>
+        <p class="mt-0 hero__description">
+          Akan melangsungkan resepsi pernikahan dalam:
+        </p>
         <div class="simply-countdown mt-5"></div>
-        <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">
+        <a
+          href="#home"
+          class="btn btn-lg mt-4 hero__button"
+          onClick="enableScroll()"
+        >
           Lihat Undangan
         </a>
       </main>
@@ -57,7 +63,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
       <div class="container">
-        <a class="navbar-brand" href="#">Diki & Hani</a>
+        <a class="navbar-brand" href="#">Diky & Hani</a>
         <button
           class="navbar-toggler border-0"
           type="button"
@@ -76,7 +82,7 @@
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              Diki & Hani
+              Diky & Hani
             </h5>
             <button
               type="button"
@@ -105,9 +111,11 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
-            <h4>Assalamu’alaikum warahmatullahi wabarakatuh</h4>
+            <h4 class="home__title">
+              Assalamu’alaikum warahmatullahi wabarakatuh
+            </h4>
 
-            <p>
+            <p class="home__subtitle">
               Maha Suci Allah yang telah menciptakan makhluk-Nya
               berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah
               mengiringi pernikahan kami.
@@ -118,8 +126,8 @@
           <div class="col-lg-6">
             <div class="row">
               <div class="col-8 text-end">
-                <h3>Diki Iskandar</h3>
-                <p>
+                <h3 class="couple__title">Diky Iskandar</h3>
+                <p class="couple__subtitle">
                   Putra pertama dari Bpk.Maryo
                   <br />
                   dan
@@ -130,8 +138,8 @@
               <div class="col-4">
                 <img
                   src="assets/img/Diki.png"
-                  alt="diki-image"
-                  class="img-responsive rounded-circle"
+                  alt="Diky-image"
+                  class="img-responsive rounded-circle couple__img"
                 />
               </div>
             </div>
@@ -145,12 +153,12 @@
                 <img
                   src="assets/img/hani.png"
                   alt="image1"
-                  class="img-responsive rounded-circle"
+                  class="img-responsive rounded-circle couple-img"
                 />
               </div>
               <div class="col-8">
-                <h3>Aan Hanifatul Maula</h3>
-                <p>
+                <h3 class="couple-title">Aan Hanifatul Maula</h3>
+                <p class="couple-subtitle">
                   Putri kedua dari Bpk.Nur Arifin
                   <br />
                   dan
@@ -163,14 +171,16 @@
         </div>
         <div class="row justify-content-center couple">
           <div class="col-md-8 text-center">
-            <h4>ِبِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْم</h4>
-            <h5>
+            <h4 class="couple__title">
+              ِبِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْم
+            </h4>
+            <h5 class="couple__subtitle">
               وَاللّٰهُ جَعَلَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا وَّجَعَلَ
               لَكُمْ مِّنْ اَزْوَاجِكُمْ بَنِيْنَ وَحَفَدَةً وَّرَزَقَكُمْ مِّنَ
               الطَّيِّبٰتِۗ اَفَبِالْبَاطِلِ يُؤْمِنُوْنَ وَبِنِعْمَتِ اللّٰهِ
               هُمْ يَكْفُرُوْنَۙ ۝٧
             </h5>
-            <p>
+            <p class="couple__subtitle">
               Allah menjadikan bagimu pasangan (suami atau istri) dari jenis
               kamu sendiri, menjadikan bagimu dari pasanganmu anak-anak dan
               cucu-cucu, serta menganugerahi kamu rezeki yang baik-baik. Mengapa
@@ -189,8 +199,8 @@
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
             <!-- <h2>Informasi Acara</h2> -->
-            <h2>Acara Pernikahan</h2>
-            <p>
+            <h2 class="info__title">Acara Pernikahan</h2>
+            <p class="info__subtitle">
               Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala,
               insyaAllah kami akan menyelenggarakan acara :
             </p>
@@ -202,11 +212,12 @@
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              class="info__img"
             ></iframe>
             <a
               href="https://maps.app.goo.gl/rtgp5m7Kwg95nqm77 "
               target="_blank"
-              class="btn btn-light btn-sm my-3"
+              class="btn btn-light btn-sm my-3 info__button"
             >
               Klik untuk membuka peta
             </a>
@@ -273,8 +284,8 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
-            <span>Bagaimana Cinta Kami Bersemi</span>
-            <h2>Cerita Kami</h2>
+            <span class="story__title">Bagaimana Cinta Kami Bersemi</span>
+            <h2 class="story__subtitle">Cerita Kami</h2>
           </div>
         </div>
         <div class="row">
@@ -283,35 +294,43 @@
               <li>
                 <div
                   class="timeline-image"
-                  style="background-image: url(img/building_school.jpg)"
+                  style="background-image: url(assets/img/instagram.png)"
                 ></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h3>Pertama Bertemu</h3>
-                    <span>1 Januari 2018</span>
+                    <span>February 2023</span>
                   </div>
                   <div class="timeline-body">
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Modi itaque rerum harum accusamus natus deleniti!
+                      Berawal hanya sekedar saling mengirim pesan di salah satu
+                      medsos, akhirnya kami mulai dekat dan menyampaikan tujuan
+                      masing-masing, yaitu ingin mencari pendamping hidup.
                     </p>
                   </div>
                 </div>
               </li>
               <li class="timeline-inverted">
                 <div
-                  class="timeline-image"
-                  style="background-image: url(https://picsum.photos/300/300)"
+                  class="timeline-image timeline-right"
+                  style="background-image: url(assets/img/stasiun-gambir.jpeg)"
                 ></div>
-                <div class="timeline-panel">
+                <div class="timeline-panel timeline-right">
                   <div class="timeline-heading">
                     <h3>Mulai Serius</h3>
-                    <span>1 Januari 2017</span>
+                    <span>Maret - April 2023</span>
                   </div>
                   <div class="timeline-body">
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Modi itaque rerum harum accusamus natus deleniti!
+                      Kami bertemu pertama kali di stasiun gambir. Karena saat
+                      itu Hany akan pulang ke kuningan untuk libur lebaran idul
+                      fitri lalu A Diky menyampaikan pesan bahwa ketika hari
+                      raya idul fitri A Diky akan ke rumah untuk berkenalan
+                      dengan orang tua Hany.
+                    </p>
+                    <p>
+                      Kami lebih mengenal dan memahami karakter masing-masing
+                      dan mulai merencanakan sebuah “pernikahan”
                     </p>
                   </div>
                 </div>
@@ -319,17 +338,19 @@
               <li>
                 <div
                   class="timeline-image"
-                  style="background-image: url(https://picsum.photos/301/301)"
+                  style="background-image: url(assets/img/ring-couple.png)"
                 ></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h3>Tunangan</h3>
-                    <span>7 November 2018</span>
+                    <span>September 2023</span>
                   </div>
                   <div class="timeline-body">
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Modi itaque rerum harum accusamus natus deleniti!
+                      Acara pertemuan 2 keluarga pun terjadi. kami memutuskan
+                      untuk menentukan acara pernikahan dan mulai mempersiapkan
+                      segala kebutuhan yang diperlukan untuk acara pernikahan
+                      kami.
                     </p>
                   </div>
                 </div>
@@ -358,12 +379,12 @@
             <a
               href="assets/img/wedding6.jpg"
               data-toggle="lightbox"
-              data-caption="Diki & Hani 1"
+              data-caption="Diky & Hani 1"
               data-gallery="mygallery"
             >
               <img
                 src="assets/img/wedding6.jpg"
-                alt="Diki & Hani 1"
+                alt="Diky & Hani 1"
                 class="img-fluid w-100 rounded"
               />
             </a>
@@ -372,12 +393,12 @@
             <a
               href="assets/img/wedding1.jpg"
               data-toggle="lightbox"
-              data-caption="Diki & Hani 2"
+              data-caption="Diky & Hani 2"
               data-gallery="mygallery"
             >
               <img
                 src="assets/img/wedding1.jpg"
-                alt="Diki & Hani 2"
+                alt="Diky & Hani 2"
                 class="img-fluid w-100 rounded"
               />
             </a>
@@ -386,12 +407,12 @@
             <a
               href="assets/img/wedding2.jpg"
               data-toggle="lightbox"
-              data-caption="Diki & Hani 3"
+              data-caption="Diky & Hani 3"
               data-gallery="mygallery"
             >
               <img
                 src="assets/img/wedding2.jpg"
-                alt="Diki & Hani 3"
+                alt="Diky & Hani 3"
                 class="img-fluid w-100 rounded"
               />
             </a>
@@ -400,12 +421,12 @@
             <a
               href="assets/img/wedding3.jpg"
               data-toggle="lightbox"
-              data-caption="Diki & Hani 4"
+              data-caption="Diky & Hani 4"
               data-gallery="mygallery"
             >
               <img
                 src="assets/img/wedding3.jpg"
-                alt="Diki & Hani 4"
+                alt="Diky & Hani 4"
                 class="img-fluid w-100 rounded"
               />
             </a>
@@ -414,12 +435,12 @@
             <a
               href="assets/img/wedding5.jpg"
               data-toggle="lightbox"
-              data-caption="Diki & Hani 5"
+              data-caption="Diky & Hani 5"
               data-gallery="mygallery"
             >
               <img
                 src="assets/img/wedding5.jpg"
-                alt="Diki & Hani 5"
+                alt="Diky & Hani 5"
                 class="img-fluid w-100 rounded"
               />
             </a>
@@ -428,12 +449,12 @@
             <a
               href="assets/img/wedding4.jpg"
               data-toggle="lightbox"
-              data-caption="Diki & Hani 6"
+              data-caption="Diky & Hani 6"
               data-gallery="mygallery"
             >
               <img
                 src="assets/img/wedding4.jpg"
-                alt="Diki & Hani 6"
+                alt="Diky & Hani 6"
                 class="img-fluid w-100 rounded"
               />
             </a>
@@ -522,7 +543,7 @@
             <ul class="list-group">
               <li class="list-group-item" style="background-color: transparent">
                 <div class="fw-bold">BRI</div>
-                DIKI ISKANDAR (Diki)
+                Diky ISKANDAR (Diky)
                 <div class="input-group mb-3">
                   <input
                     type="text"
@@ -559,7 +580,7 @@
         <div class="row">
           <div class="col text-center">
             <small class="block">
-              &copy; 2024 Diki & Hani Wedding. All Rights Reserved.
+              &copy; 2024 Diky & Hani Wedding. All Rights Reserved.
             </small>
             <small class="block">
               Design by
@@ -608,10 +629,16 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
     <!-- Simply Countdown -->
     <script src="assets/js/simplyCountdown.min.js"></script>
     <!-- My Javascript -->
+    <script src="assets/js/script.js"></script>
     <script>
       simplyCountdown(".simply-countdown", {
         year: 2024, // required
