@@ -66,9 +66,9 @@ body {
   backdrop-filter: blur(4px);
 } */
 
-.mynavbar .offcanvas {
+/* .mynavbar .offcanvas {
   height: 100vh;
-}
+} */
 
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
@@ -488,7 +488,7 @@ footer li {
   }
 
   .simply-countdown > .simply-section {
-    padding: 25px;
+    padding: 30px;
     margin: 3px;
   }
 
