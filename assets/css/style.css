@@ -66,9 +66,9 @@ body {
   backdrop-filter: blur(4px);
 } */
 
-/* .mynavbar .offcanvas {
+.mynavbar .offcanvas {
   height: 100vh;
-} */
+}
 
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
