@@ -150,7 +150,7 @@ body {
 
 .info {
   background-color: var(--cream);
-  color: var(--cokelat);
+  color: var(--bg);
   padding-top: 10rem;
   padding-bottom: 8rem;
 }
@@ -161,12 +161,12 @@ body {
 
 .info .description {
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .info .card {
   background-color: rgba(255, 255, 255, 0.2) !important;
-  color: var(--cokelat) !important;
+  color: var(--bg) !important;
   border: 1px dashed #999;
 }
 
