@@ -63,7 +63,7 @@ function addPost() {
           <img src="assets/img/${USERID.image}">
           <div>
               <h4>${USERID.name}</h4>
-              <p>${USERID.message}</p>
+              <p>${USERID.pesan}</p>
               <span class="date">${USERID.date}</span>
           </div>    
       </div>`
