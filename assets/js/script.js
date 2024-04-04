@@ -22,59 +22,59 @@ sr.reveal(`.couple-img, .couple-title, .couple-subtitle, .timeline-inverted, .ti
 });
 
 
-const USERID = {
-  name: null,
-  identity: null,
-  image: null,
-  message: null,
-  date: null
-}
+// const USERID = {
+//   name: null,
+//   identity: null,
+//   image: null,
+//   message: null,
+//   date: null
+// }
 
-const userComment = document.querySelector(".usercomment");
-const publishBtn = document.querySelector("#publish");
-const comments = document.querySelector(".comments");
-const userName = document.querySelector(".user");
+// const userComment = document.querySelector(".usercomment");
+// const publishBtn = document.querySelector("#publish");
+// const comments = document.querySelector(".comments");
+// const userName = document.querySelector(".user");
 
-userComment.addEventListener("input", e => {
-  if (!userComment.value) {
-    publishBtn.setAttribute("disabled", "disabled");
-    publishBtn.classList.remove("abled")
-  } else {
-    publishBtn.removeAttribute("disabled");
-    publishBtn.classList.add("abled")
-  }
-})
+// userComment.addEventListener("input", e => {
+//   if (!userComment.value) {
+//     publishBtn.setAttribute("disabled", "disabled");
+//     publishBtn.classList.remove("abled")
+//   } else {
+//     publishBtn.removeAttribute("disabled");
+//     publishBtn.classList.add("abled")
+//   }
+// })
 
-function addPost() {
-  if (!userComment.value) return;
-  USERID.name = userName.value;
-  if (USERID.name === "Anonymous") {
-    USERID.identity = false;
-    USERID.image = "anonymous.png"
-  } else {
-    USERID.identity = true;
-    USERID.image = "user.png"
-  }
+// function addPost() {
+//   if (!userComment.value) return;
+//   USERID.name = userName.value;
+//   if (USERID.name === "Anonymous") {
+//     USERID.identity = false;
+//     USERID.image = "anonymous.png"
+//   } else {
+//     USERID.identity = true;
+//     USERID.image = "user.png"
+//   }
 
-  USERID.message = userComment.value;
-  USERID.date = new Date().toLocaleString();
-  let published =
-    `<div class="parents">
-          <img src="assets/img/${USERID.image}">
-          <div>
-              <h4>${USERID.name}</h4>
-              <p>${USERID.pesan}</p>
-              <span class="date">${USERID.date}</span>
-          </div>    
-      </div>`
+//   USERID.message = userComment.value;
+//   USERID.date = new Date().toLocaleString();
+//   let published =
+//     `<div class="parents">
+//           <img src="assets/img/${USERID.image}">
+//           <div>
+//               <h4>${USERID.name}</h4>
+//               <p>${USERID.pesan}</p>
+//               <span class="date">${USERID.date}</span>
+//           </div>
+//       </div>`
 
-  comments.innerHTML += published;
-  userComment.value = "";
-  publishBtn.classList.remove("abled")
+//   comments.innerHTML += published;
+//   userComment.value = "";
+//   publishBtn.classList.remove("abled")
 
-  let commentsNum = document.querySelectorAll(".parents").length;
-  document.getElementById("comment").textContent = commentsNum;
+//   let commentsNum = document.querySelectorAll(".parents").length;
+//   document.getElementById("comment").textContent = commentsNum;
 
-}
+// }
 
-publishBtn.addEventListener("click", addPost);
+// publishBtn.addEventListener("click", addPost);

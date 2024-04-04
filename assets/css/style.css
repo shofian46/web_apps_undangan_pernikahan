@@ -1,8 +1,7 @@
 :root {
-  --cream: #fbf3d5;
   --cokelat: #fdaf7b;
+  --cream: #fbf3d5;
   --pink: #f14e95;
-  --indigo: #6610f2;
   --bg: #0a0a0a;
   --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
@@ -64,11 +63,11 @@ body {
 /* .mynavbar {
   background-color: rgba(255, 255, 255, 0.3) !important;
   backdrop-filter: blur(4px);
-} */
+}
 
 .mynavbar .offcanvas {
   height: 100vh;
-}
+} */
 
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
@@ -83,6 +82,7 @@ body {
 
 .home {
   background-color: var(--cream);
+  background-size: cover;
   min-height: 100vh;
   margin-top: -6rem;
   padding-top: 15rem;
@@ -101,6 +101,12 @@ body {
   font-weight: bold;
 }
 
+.info p {
+  font-size: 1.5rem;
+  color: var(--bg);
+  font-weight: 400;
+}
+
 .home h3 {
   color: #444;
   font-size: 1.5rem;
@@ -108,7 +114,7 @@ body {
 }
 
 .home p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #666;
 }
 
@@ -126,11 +132,6 @@ body {
   width: 100%;
 }
 
-.home .couple .couple-subtitle,
-.home .couple .couple__subtitle {
-  font-size: 1.35rem;
-}
-
 .home .heart {
   width: 50px;
   height: 50px;
@@ -145,12 +146,12 @@ body {
 
 .home .heart i {
   margin: auto;
-  color: var(--cokelat);
+  color: var(--pink);
 }
 
 .info {
   background-color: var(--cream);
-  color: var(--bg);
+  color: var(--cokelat);
   padding-top: 10rem;
   padding-bottom: 8rem;
 }
@@ -160,30 +161,31 @@ body {
 }
 
 .info .description {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .info .card {
   background-color: rgba(255, 255, 255, 0.2) !important;
   color: var(--bg) !important;
-  border: 1px dashed #999;
+  border: 1px solid #999;
 }
 
 .info .card-header {
-  border-bottom: 1px hidden #999;
+  border-bottom: 1px solid #999;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 
 .info .card-body {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .info .card-footer {
-  border-top: 1px hidden #999;
-  font-size: 1.15rem;
-  font-weight: 300;
+  border-top: 1px solid #999;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
 .story,
@@ -198,20 +200,20 @@ body {
 .gallery span,
 .gifts span {
   text-transform: uppercase;
-  font-weight: 600;
   color: #666;
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   display: block;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .story p,
 .gallery p,
 .rsvp p,
 .gifts p {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .timeline {
@@ -319,11 +321,11 @@ body {
   background-color: var(--cream);
 }
 
-.gifts {
+.rsvp {
   background-color: var(--cream);
 }
 
-.rsvp {
+.gifts {
   background-color: var(--cream);
 }
 
@@ -333,6 +335,8 @@ body {
 
 .rsvp p {
   color: var(--bg);
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .rsvp form label {
@@ -340,27 +344,28 @@ body {
 }
 
 .rsvp button {
-  color: var(--bg);
   background-color: var(--cream);
-  box-shadow: var(--shadow);
+  color: var(--bg);
   border: 1px solid var(--cream);
+  box-shadow: var(--shadow);
+  margin-top: -1.5rem;
 }
 
 .rsvp button:hover {
-  color: var(--cokelat);
-  background-color: var(--cream);
-  box-shadow: var(--shadow);
+  background-color: var(--bg);
+  color: #fff;
   border: 1px solid var(--cream);
+  box-shadow: var(--shadow);
 }
 
 footer {
   padding: 3rem;
-  background-color: var(--bg);
-  color: white;
+  background-color: var(--cream);
+  color: var(--cokelat);
 }
 
 footer a {
-  color: var(--cokelat);
+  color: var(--bg);
   font-weight: bold;
   text-decoration: none;
 }
@@ -414,11 +419,11 @@ footer li {
 /* laptop */
 @media (max-width: 992px) {
   html {
-    font-size: 85%;
+    font-size: 75%;
   }
 
   .simply-countdown > .simply-section {
-    padding: 70px;
+    padding: 60px;
   }
 
   .home .heart {
@@ -458,16 +463,16 @@ footer li {
 /* tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 55%;
+    font-size: 65%;
   }
 
   .simply-countdown > .simply-section {
-    padding: 60px;
+    padding: 50px;
     margin: 5px;
   }
 
   .mynavbar .nav-link {
-    font-size: 1.75rem;
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -488,7 +493,7 @@ footer li {
   }
 
   .simply-countdown > .simply-section {
-    padding: 30px;
+    padding: 29px;
     margin: 3px;
   }
 
