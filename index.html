@@ -83,7 +83,9 @@
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dino</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              Diki & Hanifa
+            </h5>
             <button
               type="button"
               class="btn-close"
@@ -127,7 +129,7 @@
               الطَّيِّبٰتِۗ اَفَبِالْبَاطِلِ يُؤْمِنُوْنَ وَبِنِعْمَتِ اللّٰهِ
               هُمْ يَكْفُرُوْنَۙ ۝٧
             </h5>
-            <p class="couple__subtitle">
+            <p>
               Allah menjadikan bagimu pasangan (suami atau istri) dari jenis
               kamu sendiri, menjadikan bagimu dari pasanganmu anak-anak dan
               cucu-cucu, serta menganugerahi kamu rezeki yang baik-baik. Mengapa
@@ -589,9 +591,14 @@
                   src="assets/img/BRI.png"
                 />
                 <br />
-                Diky Iskandar (Diky)
+                <p class="mt-3">Diky Iskandar (Diky)</p>
                 <br />
-                4268 0101 1413 539
+                <button
+                  class="btn btn-light fs-4"
+                  onclick="copyToClipboard('4268 0101 1413 539')"
+                >
+                  4268 0101 1413 539
+                </button>
               </li>
               <li class="list-group-item" style="background-color: transparent">
                 <div class="fw-bold">BCA</div>
@@ -602,9 +609,14 @@
                   src="assets/img/BCA.png"
                 />
                 <br />
-                Aan Hanifatul Maula (Hanifa)
+                <p class="mt-3">Aan Hanifatul Maula (Hanifa)</p>
                 <br />
-                5390723581
+                <button
+                  class="btn btn-light fs-4"
+                  onclick="copyToClipboard('5390723581')"
+                >
+                  5390723581
+                </button>
               </li>
             </ul>
           </div>
@@ -819,6 +831,16 @@
           liveAjax: true,
         });
       });
+
+      function copyToClipboard(text) {
+        var input = document.createElement("textarea");
+        input.innerHTML = text;
+        document.body.appendChild(input);
+        input.select();
+        var result = document.execCommand("copy");
+        document.body.removeChild(input);
+        return result;
+      }
     </script>
   </body>
 </html>
